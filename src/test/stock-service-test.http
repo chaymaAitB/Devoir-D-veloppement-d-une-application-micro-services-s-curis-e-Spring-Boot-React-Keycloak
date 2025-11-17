@@ -1,0 +1,66 @@
+### Test 1: Ajouter une cotation
+POST http://localhost:8083/api/stocks
+Content-Type: application/json
+
+{
+  "date": "2024-11-17",
+  "openValue": 150.0,
+  "closeValue": 155.5,
+  "volume": 2500,
+  "companyId": 1
+}
+
+> {%
+    client.test("Cotation ajoutée avec succès", function() {
+        client.assert(response.status === 201, "Le statut n'est pas 201");
+        client.assert(response.body.hasOwnProperty("id"), "La réponse doit avoir un ID");
+    });
+%}
+
+### Test 2: Consulter toutes les cotations
+GET http://localhost:8083/api/stocks
+
+> {%
+    client.test("Liste des cotations récupérée", function() {
+        client.assert(response.status === 200, "Le statut n'est pas 200");
+        client.assert(Array.isArray(response.body), "La réponse doit être un tableau");
+    });
+%}
+
+### Test 3: Consulter une cotation spécifique
+GET http://localhost:8083/api/stocks/1
+
+> {%
+    client.test("Cotation spécifique récupérée", function() {
+        client.assert(response.status === 200, "Le statut n'est pas 200");
+        client.assert(response.body.id === 1, "L'ID ne correspond pas");
+    });
+%}
+
+### Test 4: Calculer le prix actuel
+GET http://localhost:8083/api/stocks/company/1/current-price
+
+> {%
+    client.test("Prix actuel calculé", function() {
+        client.assert(response.status === 200, "Le statut n'est pas 200");
+        client.assert(typeof response.body === "number", "Le prix doit être un nombre");
+    });
+%}
+
+### Test 5: Supprimer une cotation
+DELETE http://localhost:8083/api/stocks/1
+
+> {%
+    client.test("Cotation supprimée", function() {
+        client.assert(response.status === 204, "Le statut n'est pas 204");
+    });
+%}
+
+### Test 6: Vérifier la suppression
+GET http://localhost:8083/api/stocks/1
+
+> {%
+    client.test("Cotation supprimée vérifiée", function() {
+        client.assert(response.status === 404, "La cotation devrait être supprimée");
+    });
+%}
