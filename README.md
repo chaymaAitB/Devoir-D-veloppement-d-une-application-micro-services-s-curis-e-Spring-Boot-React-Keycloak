@@ -63,13 +63,13 @@ npm start
 
 ## Configuration
 
-### Keycloak
-- URL : `http://localhost:8080`
+### Keycloak : Docker compose file
+- URL : `http://localhost:8081`
 - Realm : `microservices-realm`
 - Client : `react-frontend`
 
 ### Services
-- API Gateway : `http://localhost:8081`
+- API Gateway : `http://localhost:8888
 - Stock Service : `http://localhost:8082`
 - Company Service : `http://localhost:8083`
 
@@ -83,4 +83,5 @@ La documentation Swagger est disponible après démarrage :
 
 ## Démo Vidéo
 ![](./imgs/demo.mvk)
+
 
