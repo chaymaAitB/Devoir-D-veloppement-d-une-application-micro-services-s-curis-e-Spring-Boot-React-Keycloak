@@ -2,11 +2,11 @@
 
 Ce projet démontre une architecture microservices sécurisée utilisant Spring Boot, React et Keycloak.
 
-## 📋 Architecture du Projet
+## Architecture du Projet
 
 ![](./imgs/arch.jpeg)
 
-## 🏗️ Composants
+## Composants
 
 ### 1. **Keycloak** - Gestion d'identité et d'accès
 - Serveur d'authentification et d'autorisation
@@ -29,7 +29,7 @@ Ce projet démontre une architecture microservices sécurisée utilisant Spring 
 - **company-service** : Gestion des données entreprises
 - Chaque service est indépendant et sécurisé
 
-## 🚀 Démarrage Rapide
+## Démarrage Rapide
 
 ### Prérequis
 - Java 17+
@@ -61,7 +61,7 @@ npm install
 npm start
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Keycloak
 - URL : `http://localhost:8080`
@@ -76,7 +76,11 @@ npm start
 ### Frontend
 - URL : `http://localhost:3000`
 
-## 📄 Documentation API
+## Documentation API
 
 La documentation Swagger est disponible après démarrage :
 - Chaque service expose sa propre documentation
+
+## Démo Vidéo
+![](./imgs/demo.mvk)
+
