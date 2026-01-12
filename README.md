@@ -83,6 +83,10 @@ La documentation Swagger est disponible après démarrage :
 
 ## Démo Vidéo
 ![](./imgs/demo.mkv)
+## Démo Vidéo
+[Télécharger la démo](./imgs/demo.mkv)
+
+
 
 
 
