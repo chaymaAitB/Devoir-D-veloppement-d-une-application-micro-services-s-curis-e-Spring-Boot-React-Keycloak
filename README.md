@@ -82,9 +82,8 @@ La documentation Swagger est disponible après démarrage :
 - Chaque service expose sa propre documentation
 
 ## Démo Vidéo
-![](./imgs/demo.mkv)
-## Démo Vidéo
 [Télécharger la démo](./imgs/demo.mkv)
+
 
 
 
