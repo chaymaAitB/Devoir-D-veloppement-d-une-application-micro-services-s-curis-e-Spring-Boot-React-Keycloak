@@ -69,7 +69,7 @@ npm start
 - Client : `react-frontend`
 
 ### Services
-- API Gateway : `http://localhost:8888
+- API Gateway : `http://localhost:8888`
 - Stock Service : `http://localhost:8082`
 - Company Service : `http://localhost:8083`
 
@@ -82,6 +82,7 @@ La documentation Swagger est disponible après démarrage :
 - Chaque service expose sa propre documentation
 
 ## Démo Vidéo
-![](./imgs/demo.mvk)
+![](./imgs/demo.mkv)
+
 
 
